@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>立方体</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	html,body{
+		height: 100%;
+		background: #f4f4f4;
+	}
+	
+	.wrap{
+		height: 100%;
+		position: relative;
+
+		-webkit-transform-style:preserve-3d;
+		-moz-transform-style:preserve-3d;
+
+		-webkit-perspective:0px;
+		-moz-perspective:0px;	
+
+		-webkit-animation:myAnimation 5s ease infinite;
+		-moz-animation:myAnimation 5s ease infinite;
+
+	}
+
+	.box{
+		width: 200px;
+
+		height: 200px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin: -100px 0 0 -100px;
+		line-height: 200px;
+		text-align: center;
+		font-size: 48px;
+		color: white;			
+	}
+	.box1{
+		-webkit-transform:rotateY(90deg) translateZ(-100px);
+		-moz-transform:rotateY(90deg) translateZ(-100px);
+		background-color: rgba(161,176,194,0.5);
+	}
+	.box2{
+		-webkit-transform:rotateY(90deg) translateZ(100px);
+		-moz-transform:rotateY(90deg) translateZ(100px);
+		background: rgba(255,74,74,0.5);
+	}
+	.box3{
+		-webkit-transform:rotateX(90deg) translateZ(100px);
+		-moz-transform:rotateX(90deg) translateZ(100px);
+		background: rgba(227,84,255,0.5);
+	}
+	.box4{
+		-webkit-transform:rotateX(90deg) translateZ(-100px);
+		-moz-transform:rotateX(90deg) translateZ(-100px);
+		background: rgba(83,250,58,0.5);
+	}
+	.box5{
+		-webkit-transform:translateZ(-100px);
+		-moz-transform:translateZ(-100px);
+		background-color: rgba(244,250,58,0.5);
+	}
+	.box6{
+		-webkit-transform:translateZ(100px);
+		-moz-transform:translateZ(100px);
+		background-color: rgba(250,103,58,0.5);
+	}
+	@-webkit-keyframes myAnimation{
+		0%{
+			-webkit-transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+			-webkit-transform-origin:center center;
+		}
+		100%{
+			-webkit-transform:rotateX(180deg) rotateY(180deg) rotateZ(180deg);
+			-webkit-transform-origin:center center;
+		}
+	}
+	@-moz-keyframes myAnimation{
+		0%{
+			-moz-transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+			-webkit-transform-origin:center center;
+		}
+		100%{
+			-moz-transform:rotateX(180deg) rotateY(180deg) rotateZ(180deg);
+			-webkit-transform-origin:center center;
+		}
+	}
+
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="box box1">1</div>
+		<div class="box box2">2</div>
+		<div class="box box3">3</div>
+		<div class="box box4">4</div>
+		<div class="box box5">5</div>
+		<div class="box box6">6</div>
+	</div>
+</body>
+</html>
